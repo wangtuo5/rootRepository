@@ -12,5 +12,6 @@ public class demo44 {
         int yh =11;
         int yh2 =11;
         int kk = 22;
+        int aa = 33;
     }
 }
