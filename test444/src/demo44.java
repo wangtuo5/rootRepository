@@ -10,5 +10,6 @@ public class demo44 {
         int y =11;
         int hh =11;
         int yh =11;
+        int yh2 =11;
     }
 }
