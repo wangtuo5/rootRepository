@@ -3,5 +3,6 @@ public class demo44 {
         int c =11;
         int d =11;
         int e =11;
+        int f =11;
     }
 }
