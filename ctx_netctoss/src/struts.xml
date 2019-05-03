@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+
+<struts>
+	<package name="netctoss-default" extends="struts-default" >
+		<!-- 登录按钮的处理 -->
+		<action name="login" class="actions.LoginAction">
+			<result name="success">main.jsp</result>
+			<result name="success1">mainuser.jsp</result>
+			<result name="input">login/loginForm.jsp</result>
+			<result name="fail">login/loginForm.jsp</result>
+		</action>
+		
+		<!-- 登出按钮的处理 -->
+		<action name="loginout" class="actions.LoginoutAction">
+			<result name="success">login/loginForm.jsp</result>
+		</action>
+		
+		<!-- 增加权限 -->
+		<action name="rightadd" class="actions.rights.RightaddAction">
+			<result name="success">rightbrowse.jsp</result>
+			<result name="fail">rightadd.jsp</result>
+		</action>
+		
+		<!-- 权限修改 -->
+		<action name="rightupdate" class="actions.rights.RightupdateAction">
+			<result name="success">rightbrowse.jsp</result>
+			<result name="fail">rightupdate.jsp</result>
+		</action>
+		
+		<!-- 角色修改 -->
+		<action name="roleupdate" class="actions.rights.RoleupdateAction">
+			<result name="success">rolebrowse.jsp</result>
+			<result name="fail">rolebrforupd.jsp</result>
+		</action>
+		
+		<!-- 角色增加 -->
+		<action name="roleadd" class="actions.rights.RoleaddAction">
+			<result name="success">rolebrowse.jsp</result>
+			<result name="fail">roleadd.jsp</result>
+		</action>
+		
+		<!-- 用户账单查询 -->
+		<action name="search" class="actions.selfservice.searchAction">
+			<result name="success">reckon.jsp</result>
+			<result name="fail">index.jsp</result>
+		</action>
+		
+		<!-- 个人信息修改 -->
+		<action name="adminselfupd" class="actions.admin.AdminselfupdAction">
+			<result name="success" type="redirect">admin/adminbrowse.jsp</result>
+			<result name="fail" type="redirect">admin/adminselfupd.jsp</result>
+		</action>
+		
+		<!-- 管理员增加 -->
+		<action name="adminadd" class="actions.admin.AdminaddAction">
+			<result name="success" type="redirect">admin/adminbrowse.jsp</result>
+			<result name="fail" type="redirect">admin/adminadd.jsp</result>
+		</action>
+		
+		<!-- 管理员修改 -->
+		<action name="adminupdate" class="actions.admin.AdminupdateAction">
+			<result name="success" type="redirect">admin/adminbrowse.jsp</result>
+			<result name="fail" type="redirect">admin/adminupdate.jsp</result>
+		</action>
+		
+		<!-- 管理员浏览  -->
+		<action name="adminask" class="actions.admin.AdminaskAction">
+			<result name="success">adminbrowse.jsp</result>
+		</action>
+		
+		<!-- 管理员浏览 修改 -->
+		<action name="adminask1" class="actions.admin.Adminask1Action">
+			<result name="success">adminbrforupd.jsp</result>
+		</action>
+		
+		<!-- 管理员浏览 删除 -->
+		<action name="adminask2" class="actions.admin.Adminask2Action">
+			<result name="success">adminbrfordel.jsp</result>
+		</action>
+		
+		<!-- 资费修改 -->
+		<action name="feeupdate" class="actions.fee.FeeupdateAction">
+			<result name="success" type="redirect">fee/feebrowse.jsp</result>
+			<result name="fail" type="redirect">fee/feebrforupd.jsp</result>
+		</action>
+		
+		<!-- 资费增加 -->
+		<action name="feeadd" class="actions.fee.FeeaddAction">
+			<result name="success" type="redirect">fee/feebrowse.jsp</result>
+			<result name="fail" type="redirect">fee/feeadd.jsp</result>
+		</action>
+		
+		<!-- 资费浏览 -->
+		<action name="feemoney" class="actions.fee.FeemoneyAction">
+			<result name="success">feebrowse.jsp</result>
+		</action>
+		
+		<!-- 资费浏览 删 -->
+		<action name="feedelete" class="actions.fee.FeedeleteAction">
+			<result name="success">feebrfordel.jsp</result>
+		</action>
+		
+		<!-- 资费浏览  更新-->
+		<action name="feebrforupd" class="actions.fee.FeebrforupdAction">
+			<result name="success">feebrforupd.jsp</result>
+		</action>
+		
+		<!-- 账单查询 -->
+		<action name="search2" class="actions.reckon.Search2Action">
+			<result name="success">reckon.jsp</result>
+			<result name="fail">index.jsp</result>
+		</action>
+		
+		<!-- 账户年查询 -->
+		<action name="acctyear" class="actions.account.AcctyearAction">
+			<result name="success">acctyear.jsp</result>
+		</action>
+		
+		<!-- 账户月查询 -->
+		<action name="acctmonth" class="actions.account.AcctmonthAction">
+			<result name="success">acctmonth.jsp</result>
+		</action>
+		
+		<!-- 账户帐号查询 -->
+		<action name="acctbrowse" class="actions.user.AcctbrowseAction">
+			<result name="success">acctbrowse.jsp</result>
+		</action>
+		
+		<!-- 账户帐号查询 修改 -->
+		<action name="acctbrforupd" class="actions.user.AcctbrforupdAction">
+			<result name="success">acctbrforupd.jsp</result>
+		</action> 
+		
+		<!-- 账户帐号查询 删除 -->
+		<action name="acctbrfordel" class="actions.user.AcctbrfordelAction">
+			<result name="success">acctbrfordel.jsp</result>
+		</action> 
+		
+		<!-- 账户帐号修改 -->
+		<action name="acctupdatectx" class="actions.user.AcctupdatectxAction">
+			<result name="success">acctbrowse.jsp</result>
+			<result name="fail">acctbrforupd.jsp</result>
+		</action> 
+		
+		<!-- 账户帐号增加 -->
+		<action name="acctaddctx" class="actions.user.AcctaddctxAction">
+			<result name="success">acctbrowse.jsp</result>
+			<result name="fail">acctadd.jsp</result>
+		</action>
+		
+		<!-- 业务查询 -->
+		<action name="bussbrowse" class="actions.user.BussbrowseAction">
+			<result name="success">bussbrowse.jsp</result>
+		</action>
+		
+		<!-- 业务查询 修改 -->
+		<action name="bussbrowseupdate" class="actions.user.BussbrowseupdateAction">
+			<result name="success">bussbrforupd.jsp</result>
+		</action>
+		
+		<!-- 业务查询 删除 -->
+		<action name="bussbrowsedelete" class="actions.user.BussbrowsedeleteAction">
+			<result name="success">bussbrfordel.jsp</result>
+		</action>
+		
+		<!-- 业务修改 -->
+		<action name="bussupdate" class="actions.user.BussupdateAction">
+			<result name="success">bussbrowse.jsp</result>
+			<result name="fail">bussbrforupd.jsp</result>
+		</action>
+		
+		<!-- 业务增加 -->
+		<action name="bussadd" class="actions.user.BussaddAction">
+			<result name="success">bussbrowse.jsp</result>
+			<result name="fail">bussadd.jsp</result>
+		</action>
+	</package>
+</struts>

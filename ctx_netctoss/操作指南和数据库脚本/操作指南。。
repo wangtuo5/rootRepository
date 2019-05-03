@@ -1,0 +1,19 @@
+1.登录页面 http://localhost:8080/netctoss  默认分配了管理员ctx,123456 和用户sd 123456
+
+2.选择用户登录 从login/loginFrom.jsp==>web.xml==>struts.xml==>action/LoginAction.java执行业务代码
+验证用了validation.xml,和session防止重复登录
+
+3.用户账单查询：默认openlab 2011年4月 ，点击查询即可！
+
+4.退出的时候要点击右上的登出连接，才能销毁session
+
+5.举账单管理为例子，都是从对应的业务包,如 WebRoot/selfserivice/..发送请求到对应的src/action/..下去处理
+
+6.其中参考sql语句脚本为数据设计的，表字段说明
+
+7.最好使用 建造一个数据库netctoss
+	mysql -uroot -h127.0.0.1 -p（你的密码） netctoss < C:\Users\Think\Desktop\mysql.txt
+	
+     或者数据库请导入sd.sql脚本，并且更改src/util/JDBCUtil类下的连接数据代码
+     
+8.默认还是JDBC连接，hibernate只是辅助，形式的
