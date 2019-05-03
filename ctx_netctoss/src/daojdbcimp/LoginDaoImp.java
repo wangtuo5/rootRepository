@@ -5,7 +5,9 @@ import util.JDBCUtil;
 import dao.LoginDao;
 
 public class LoginDaoImp implements LoginDao{
-	
+
+
+
 	public int loginUser(String name,String password) {
 		try {
 			Connection conn = JDBCUtil.getConnection();
