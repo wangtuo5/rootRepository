@@ -5,5 +5,6 @@ public class demo44 {
         int e =11;
         int f =11;
         int ff =11;
+        int g =11;
     }
 }
