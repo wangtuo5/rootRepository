@@ -7,6 +7,9 @@ public class demo44 {
         int ff =11;
         int g =11;
         int h =11;
-        int i = 22;
+        int y =11;
+        int hh =11;
+        int yh =11;
+        int yh2 =11;
     }
 }
