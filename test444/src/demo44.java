@@ -8,5 +8,7 @@ public class demo44 {
         int g =11;
         int h =11;
         int y =11;
+        int hh =11;
+        int yh =11;
     }
 }
