@@ -7,5 +7,6 @@ public class demo44 {
         int ff =11;
         int g =11;
         int h =11;
+        int y =11;
     }
 }
